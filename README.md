@@ -12,6 +12,31 @@ I'm open to AI engineer, LLM eval and Python backend roles, remote or relocation
 
 ---
 
+## 🤝 Open-source contributions
+
+I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
+
+[![Merged PRs](https://img.shields.io/badge/merged_PRs-3-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-3-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Issues](https://img.shields.io/badge/bug_reports-4-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
+
+| Project | ⭐ | PR | Status | What I fixed |
+|---|---|---|---|---|
+| [**SAELens**](https://github.com/decoderesearch/SAELens) <br><sub>decoderesearch</sub> | 1.6k | [#776](https://github.com/decoderesearch/SAELens/pull/776) | ![status](https://img.shields.io/github/pulls/detail/state/decoderesearch/SAELens/776?label=) | `random_firing_probabilities` built a fresh `torch.Generator()`, which starts from a fixed seed, so unseeded calls returned identical probabilities every time |
+| [**delphi**](https://github.com/EleutherAI/delphi) <br><sub>EleutherAI</sub> | 280 | [#192](https://github.com/EleutherAI/delphi/pull/192) | ![status](https://img.shields.io/github/pulls/detail/state/EleutherAI/delphi/192?label=) | `split_quantiles` floored the per-quantile count, so 25 samples over 10 quantiles gave 20, and fewer samples than quantiles gave 0 with no warning |
+| [**nnsight**](https://github.com/ndif-team/nnsight) <br><sub>ndif-team</sub> | 1.1k | [#800](https://github.com/ndif-team/nnsight/pull/800) | ![status](https://img.shields.io/github/pulls/detail/state/ndif-team/nnsight/800?label=) | Reassembling a multi-invoke `.skip()` lost the container type: namedtuple outputs raised `TypeError` and `ModelOutput`/`OrderedDict` came back as plain dicts |
+| [**TransformerLens**](https://github.com/TransformerLensOrg/TransformerLens) <br><sub>TransformerLensOrg</sub> | 4k | [#1965](https://github.com/TransformerLensOrg/TransformerLens/pull/1965) | ![status](https://img.shields.io/github/pulls/detail/state/TransformerLensOrg/TransformerLens/1965?label=) | Eval helpers hardcoded `"cuda"`, which crashed on CPU and Apple MPS machines |
+| [**lighteval**](https://github.com/huggingface/lighteval) <br><sub>huggingface</sub> | 2.6k | [#1465](https://github.com/huggingface/lighteval/pull/1465) | ![status](https://img.shields.io/github/pulls/detail/state/huggingface/lighteval/1465?label=) | The LiveCodeBench sandbox's fake stdout had no binary buffer, so correct solutions were graded as wrong |
+| [**sparsify**](https://github.com/EleutherAI/sparsify) <br><sub>EleutherAI</sub> | 740 | [#146](https://github.com/EleutherAI/sparsify/pull/146) | ![status](https://img.shields.io/github/pulls/detail/state/EleutherAI/sparsify/146?label=) | `handle_arg_string` used `str.isnumeric()`, so `-5` silently became `-5.0` and Unicode numerals like `½` crashed |
+
+**Bug reports**
+- [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
+- [langchain-ai/deepagents#7478](https://github.com/langchain-ai/deepagents/issues/7478): `FilesystemBackend` writes truncate in place, so a crash mid-write destroys the file
+- [langchain-ai/deepagents#7479](https://github.com/langchain-ai/deepagents/issues/7479): `langchain-google-genai` is a required dependency but never imported
+- [huggingface/lighteval#1464](https://github.com/huggingface/lighteval/issues/1464): LCB grader fails correct solutions that write via `sys.stdout.buffer`
+
+---
+
 ## 🏗️ Gauntlet: leak-free RL environments from fresh GitHub PRs
 
 My main open-source project. It mines PRs merged *after* a model's cutoff, rebuilds each repo at the base commit in Docker, and grades agents the way SWE-bench style benchmarks do. Then it tries hard to cheat its own grader.
@@ -27,24 +52,6 @@ My main open-source project. It mines PRs merged *after* a model's cutoff, rebui
 | [**gauntlet**](https://github.com/abhishekcpp007/gauntlet) | Umbrella repo. One `docker compose up` runs the whole thing |
 
 **Gauntlet Live (Nov 2026):** 53 verified tasks out of 186 PRs across 10 repos. The oracle solves 53/53 and the cheater policies get caught 53/53. Red-teaming my own grader found a "stealth" cheat that scored 7/10, so I rebuilt the canary tests until it dropped to 0/60. CI runs a nightly calibration on random tasks.
-
----
-
-## 🤝 Open-source contributions
-
-Bugs I found and fixed myself, mostly in LLM eval and interpretability libraries.
-
-**Merged**
-- [decoderesearch/SAELens#776](https://github.com/decoderesearch/SAELens/pull/776): draw fresh firing probabilities when no seed is given
-- [EleutherAI/delphi#192](https://github.com/EleutherAI/delphi/pull/192): spread the quantile sample remainder instead of dropping it
-- [ndif-team/nnsight#800](https://github.com/ndif-team/nnsight/pull/800): rebuild a batched skip's output as its own container type
-
-**In review**
-- [TransformerLensOrg/TransformerLens#1965](https://github.com/TransformerLensOrg/TransformerLens/pull/1965): run the eval helpers on the model's own device instead of a hardcoded `"cuda"`
-- [huggingface/lighteval#1465](https://github.com/huggingface/lighteval/pull/1465): give the LiveCodeBench sandbox's fake stdout a binary buffer, so correct solutions stop failing
-- [EleutherAI/sparsify#146](https://github.com/EleutherAI/sparsify/pull/146): let `int()` decide what an int is when parsing CLI args
-
-**Issues filed:** [langchain-ai/deepagents](https://github.com/langchain-ai/deepagents) #7472 (timeout leaves orphan processes), #7474 (non-atomic file writes), #7475 (unused required dependency)
 
 ---
 
