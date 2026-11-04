@@ -4,13 +4,39 @@
 
 🌐 **Website:** [abhishekcpp007.github.io](https://abhishekcpp007.github.io)
 
-I build the environments that LLM coding agents train and get graded in. My day job is turning real merged GitHub pull requests into reproducible Docker tasks with hidden tests, then checking that agents actually solve them instead of gaming the grader. I've shipped 2,000+ of these environments and 2,000+ agent trajectories for SFT and RL post-training.
+I build the environments that LLM coding agents train and get graded in, and then I try to
+break my own grader. My day job is turning real merged GitHub pull requests into reproducible
+Docker tasks with hidden tests, then checking that agents actually solve them instead of
+gaming the scorer. I've shipped 2,000+ of these environments and 2,000+ agent trajectories
+for SFT and RL post-training.
+
+**The thing I keep finding:** a grader you haven't attacked is a grader you can't trust. When
+I red-teamed my own, a stealth cheat policy scored 7/10 before I rebuilt the canary tests and
+dropped it to 0/60. Details below.
 
 I'm open to AI engineer, LLM eval and Python backend roles, remote or relocation.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-abhisekverma007-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhisekverma007/)
 [![Email](https://img.shields.io/badge/Email-abhishek1pw%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:abhishek1pw@gmail.com)
 [![LeetCode](https://img.shields.io/badge/LeetCode-akvikramaditya007cppcoder-FFA116?logo=leetcode&logoColor=black)](https://leetcode.com/u/akvikramaditya007cppcoder/)
+
+---
+
+## 🏗️ Gauntlet: leak-free RL environments from fresh GitHub PRs
+
+My main open-source project, and the fastest way to see how I work. It mines PRs merged *after* a model's cutoff, rebuilds each repo at the base commit in Docker, and grades agents the way SWE-bench style benchmarks do. Then it tries hard to cheat its own grader.
+
+| Repo | What it does |
+|---|---|
+| [**gauntlet-harness**](https://github.com/abhishekcpp007/gauntlet-harness) | The core. PR mining, 3-run F2P/N2P/S2P/P2P test classification, an 8-check leak scan, rubric judging, a Gymnasium env (`gauntlet/SWE-v0`) and exports for SWE-bench, SFT, GRPO and DPO |
+| [**gauntlet-cheatcatcher**](https://github.com/abhishekcpp007/gauntlet-cheatcatcher) | 11 reward-hacking rules that flag test tampering, conftest tricks and hardcoded outputs |
+| [**gauntlet-repo2env**](https://github.com/abhishekcpp007/gauntlet-repo2env) | Turns a repo into env images and SWE-style tasks, with grading hardened against test edits |
+| [**gauntlet-sandbox**](https://github.com/abhishekcpp007/gauntlet-sandbox) | Docker sandboxes that record every agent step as a trajectory |
+| [**gauntlet-timemachine**](https://github.com/abhishekcpp007/gauntlet-timemachine) | Replay, branch and diff trajectories, plus an HTML viewer |
+| [**gauntlet-arena**](https://github.com/abhishekcpp007/gauntlet-arena) | FastAPI app where a human and an AI agent race on the same task, with a leaderboard |
+| [**gauntlet**](https://github.com/abhishekcpp007/gauntlet) | Umbrella repo. One `docker compose up` runs the whole thing |
+
+**Gauntlet Live (Nov 2026):** 53 verified tasks out of 186 PRs across 10 repos. The oracle solves 53/53 and the cheater policies get caught 53/53. Red-teaming my own grader found a "stealth" cheat that scored 7/10, so I rebuilt the canary tests until it dropped to 0/60. CI runs a nightly calibration on random tasks.
 
 ---
 
@@ -51,24 +77,6 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 - [langchain-ai/deepagents#7478](https://github.com/langchain-ai/deepagents/issues/7478): `FilesystemBackend` writes truncate in place, so a crash mid-write destroys the file
 - [langchain-ai/deepagents#7479](https://github.com/langchain-ai/deepagents/issues/7479): `langchain-google-genai` is a required dependency but never imported
 - [huggingface/lighteval#1464](https://github.com/huggingface/lighteval/issues/1464): LCB grader fails correct solutions that write via `sys.stdout.buffer`
-
----
-
-## 🏗️ Gauntlet: leak-free RL environments from fresh GitHub PRs
-
-My main open-source project. It mines PRs merged *after* a model's cutoff, rebuilds each repo at the base commit in Docker, and grades agents the way SWE-bench style benchmarks do. Then it tries hard to cheat its own grader.
-
-| Repo | What it does |
-|---|---|
-| [**gauntlet-harness**](https://github.com/abhishekcpp007/gauntlet-harness) | The core. PR mining, 3-run F2P/N2P/S2P/P2P test classification, an 8-check leak scan, rubric judging, a Gymnasium env (`gauntlet/SWE-v0`) and exports for SWE-bench, SFT, GRPO and DPO |
-| [**gauntlet-cheatcatcher**](https://github.com/abhishekcpp007/gauntlet-cheatcatcher) | 11 reward-hacking rules that flag test tampering, conftest tricks and hardcoded outputs |
-| [**gauntlet-repo2env**](https://github.com/abhishekcpp007/gauntlet-repo2env) | Turns a repo into env images and SWE-style tasks, with grading hardened against test edits |
-| [**gauntlet-sandbox**](https://github.com/abhishekcpp007/gauntlet-sandbox) | Docker sandboxes that record every agent step as a trajectory |
-| [**gauntlet-timemachine**](https://github.com/abhishekcpp007/gauntlet-timemachine) | Replay, branch and diff trajectories, plus an HTML viewer |
-| [**gauntlet-arena**](https://github.com/abhishekcpp007/gauntlet-arena) | FastAPI app where a human and an AI agent race on the same task, with a leaderboard |
-| [**gauntlet**](https://github.com/abhishekcpp007/gauntlet) | Umbrella repo. One `docker compose up` runs the whole thing |
-
-**Gauntlet Live (Nov 2026):** 53 verified tasks out of 186 PRs across 10 repos. The oracle solves 53/53 and the cheater policies get caught 53/53. Red-teaming my own grader found a "stealth" cheat that scored 7/10, so I rebuilt the canary tests until it dropped to 0/60. CI runs a nightly calibration on random tasks.
 
 ---
 
