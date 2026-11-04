@@ -1,6 +1,8 @@
-# Hi, I'm Abhishek 👋
+# Abhishek Verma 👋
 
-**AI Engineer · RL environments and LLM evaluation · Python, Docker, AWS**
+**AI Engineer in Gurugram, India · RL environments and LLM evaluation · Python, Docker, AWS**
+
+🌐 **Website:** [abhishekcpp007.github.io](https://abhishekcpp007.github.io)
 
 I build the environments that LLM coding agents train and get graded in. My day job is turning real merged GitHub pull requests into reproducible Docker tasks with hidden tests, then checking that agents actually solve them instead of gaming the grader. I've shipped 2,000+ of these environments and 2,000+ agent trajectories for SFT and RL post-training.
 
@@ -16,8 +18,8 @@ I'm open to AI engineer, LLM eval and Python backend roles, remote or relocation
 
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
-[![Merged PRs](https://img.shields.io/badge/merged_PRs-3-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-3-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Merged PRs](https://img.shields.io/badge/merged_PRs-5-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-6-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-4-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -28,6 +30,11 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**TransformerLens**](https://github.com/TransformerLensOrg/TransformerLens) <br><sub>TransformerLensOrg</sub> | 4k | [#1965](https://github.com/TransformerLensOrg/TransformerLens/pull/1965) | ![status](https://img.shields.io/github/pulls/detail/state/TransformerLensOrg/TransformerLens/1965?label=) | Eval helpers hardcoded `"cuda"`, which crashed on CPU and Apple MPS machines |
 | [**lighteval**](https://github.com/huggingface/lighteval) <br><sub>huggingface</sub> | 2.6k | [#1465](https://github.com/huggingface/lighteval/pull/1465) | ![status](https://img.shields.io/github/pulls/detail/state/huggingface/lighteval/1465?label=) | The LiveCodeBench sandbox's fake stdout had no binary buffer, so correct solutions were graded as wrong |
 | [**sparsify**](https://github.com/EleutherAI/sparsify) <br><sub>EleutherAI</sub> | 740 | [#146](https://github.com/EleutherAI/sparsify/pull/146) | ![status](https://img.shields.io/github/pulls/detail/state/EleutherAI/sparsify/146?label=) | `handle_arg_string` used `str.isnumeric()`, so `-5` silently became `-5.0` and Unicode numerals like `½` crashed |
+| [**tox**](https://github.com/tox-dev/tox) <br><sub>tox-dev</sub> | 4k | [#4371](https://github.com/tox-dev/tox/pull/4371) | ![status](https://img.shields.io/github/pulls/detail/state/tox-dev/tox/4371?label=) | A `re.VERBOSE` regex dropped a literal space, so commented-out PEP 723 lines were read as live metadata |
+| [**SWE-bench**](https://github.com/SWE-bench/SWE-bench) <br><sub>SWE-bench</sub> | 6.1k | [#711](https://github.com/SWE-bench/SWE-bench/pull/711) | ![status](https://img.shields.io/github/pulls/detail/state/SWE-bench/SWE-bench/711?label=) | A bare `FAIL:` line crashed the Django log parser and killed grading for that instance |
+| [**Gymnasium**](https://github.com/Farama-Foundation/Gymnasium) <br><sub>Farama</sub> | 12.8k | [#1827](https://github.com/Farama-Foundation/Gymnasium/pull/1827) | ![status](https://img.shields.io/github/pulls/detail/state/Farama-Foundation/Gymnasium/1827?label=) | `MaxAndSkipObservation` returned the previous step's frames when an episode ended mid-skip |
+| [**circuit-tracer**](https://github.com/decoderesearch/circuit-tracer) <br><sub>decoderesearch</sub> | 2.9k | [#124](https://github.com/decoderesearch/circuit-tracer/pull/124) | ![status](https://img.shields.io/github/pulls/detail/state/decoderesearch/circuit-tracer/124?label=) | A bare `squeeze()` broke single-token prompts and let real batches through unchecked |
+| [**BrowserGym**](https://github.com/ServiceNow/BrowserGym) <br><sub>ServiceNow</sub> | 1.4k | [#421](https://github.com/ServiceNow/BrowserGym/pull/421) | ![status](https://img.shields.io/github/pulls/detail/state/ServiceNow/BrowserGym/421?label=) | `hide_bid_if_invisible` crashed with an AttributeError instead of the clear error its sibling flags give |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
