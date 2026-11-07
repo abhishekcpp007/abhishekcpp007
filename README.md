@@ -45,7 +45,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
 [![Merged PRs](https://img.shields.io/badge/merged_PRs-11-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-14-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-17-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -75,6 +75,9 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**Gymnasium**](https://github.com/Farama-Foundation/Gymnasium) <br><sub>Farama</sub> | 12.8k | [#1827](https://github.com/Farama-Foundation/Gymnasium/pull/1827) | ![status](https://img.shields.io/github/pulls/detail/state/Farama-Foundation/Gymnasium/1827?label=) | `MaxAndSkipObservation` returned the previous step's frames when an episode ended mid-skip |
 | [**circuit-tracer**](https://github.com/decoderesearch/circuit-tracer) <br><sub>decoderesearch</sub> | 2.9k | [#124](https://github.com/decoderesearch/circuit-tracer/pull/124) | ![status](https://img.shields.io/github/pulls/detail/state/decoderesearch/circuit-tracer/124?label=) | A bare `squeeze()` broke single-token prompts and let real batches through unchecked |
 | [**BrowserGym**](https://github.com/ServiceNow/BrowserGym) <br><sub>ServiceNow</sub> | 1.4k | [#421](https://github.com/ServiceNow/BrowserGym/pull/421) | ![status](https://img.shields.io/github/pulls/detail/state/ServiceNow/BrowserGym/421?label=) | `hide_bid_if_invisible` crashed with an AttributeError instead of the clear error its sibling flags give |
+| [**iniconfig**](https://github.com/pytest-dev/iniconfig) <br><sub>pytest-dev</sub> | 64 | [#89](https://github.com/pytest-dev/iniconfig/pull/89) | ![status](https://img.shields.io/github/pulls/detail/state/pytest-dev/iniconfig/89?label=) | `str.splitlines()` also split on form feeds, vertical tabs and U+2028, so values broke in two and `lineof()`/`ParseError` line numbers shifted |
+| [**pytest-mock**](https://github.com/pytest-dev/pytest-mock) <br><sub>pytest-dev</sub> | 2.0k | [#661](https://github.com/pytest-dev/pytest-mock/pull/661) | ![status](https://img.shields.io/github/pulls/detail/state/pytest-dev/pytest-mock/661?label=) | `mocker.spy()` on an inherited `classmethod`/`staticmethod` raised `TypeError` when called through an instance, a regression since 3.13.0 |
+| [**pytest-randomly**](https://github.com/pytest-dev/pytest-randomly) <br><sub>pytest-dev</sub> | 724 | [#755](https://github.com/pytest-dev/pytest-randomly/pull/755) | ![status](https://img.shields.io/github/pulls/detail/state/pytest-dev/pytest-randomly/755?label=) | xdist workers re-read the cache for `--randomly-seed=last`, so with `--cache-clear` each got its own seed and collection crashed |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
