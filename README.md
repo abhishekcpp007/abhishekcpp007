@@ -44,8 +44,8 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
-[![Merged PRs](https://img.shields.io/badge/merged_PRs-10-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-15-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Merged PRs](https://img.shields.io/badge/merged_PRs-11-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-14-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
