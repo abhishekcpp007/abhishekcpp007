@@ -45,7 +45,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
 [![Merged PRs](https://img.shields.io/badge/merged_PRs-15-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-27-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-30-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -92,6 +92,9 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**MyST-Parser**](https://github.com/executablebooks/MyST-Parser) <br><sub>executablebooks</sub> | 902 | [#1230](https://github.com/executablebooks/MyST-Parser/pull/1230) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/MyST-Parser/1230?label=) | `and` instead of `or` let bad `url_schemes` classes through, crashing the build later |
 | [**pyproject-metadata**](https://github.com/pypa/pyproject-metadata) <br><sub>pypa</sub> | 44 | [#352](https://github.com/pypa/pyproject-metadata/pull/352) | ![status](https://img.shields.io/github/pulls/detail/state/pypa/pyproject-metadata/352?label=) | `License-File` leaked the absolute build path into METADATA on 2.4+ |
 | [**sphinx-autobuild**](https://github.com/sphinx-doc/sphinx-autobuild) <br><sub>sphinx-doc</sub> | 612 | [#218](https://github.com/sphinx-doc/sphinx-autobuild/pull/218) | ![status](https://img.shields.io/github/pulls/detail/state/sphinx-doc/sphinx-autobuild/218?label=) | reload script spliced into 206 Range responses, corrupting partial downloads |
+| [**flake8-bugbear**](https://github.com/PyCQA/flake8-bugbear) <br><sub>PyCQA</sub> | 1.1k | [#633](https://github.com/PyCQA/flake8-bugbear/pull/633) | ![status](https://img.shields.io/github/pulls/detail/state/PyCQA/flake8-bugbear/633?label=) | B021 never ran on `async def`, so f-string docstrings there were missed |
+| [**nox**](https://github.com/wntrblm/nox) <br><sub>wntrblm</sub> | 1.6k | [#1234](https://github.com/wntrblm/nox/pull/1234) | ![status](https://img.shields.io/github/pulls/detail/state/wntrblm/nox/1234?label=) | `--report` crashed on `Path` parametrize values; under `-j` passing sessions showed as failed |
+| [**sphinx-design**](https://github.com/executablebooks/sphinx-design) <br><sub>executablebooks</sub> | 231 | [#318](https://github.com/executablebooks/sphinx-design/pull/318) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/sphinx-design/318?label=) | `tab-set-code` silently dropped code blocks with a `:caption:` |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
