@@ -102,6 +102,16 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 
 ---
 
+## 📚 Books I wrote
+
+Three free textbooks with measured experiments and runnable projects:
+
+- [**FastAPI: Basics to Production**](https://github.com/abhishekcpp007/fastapi-book): 745 pages, 7 projects up to a deployed microservice
+- [**Machine Learning and RL Environments**](https://github.com/abhishekcpp007/ml-rl-envs-book): 594 pages, from transformers and DPO to PPO and Docker coding envs
+- [**Data Engineering and Agentic AI Evaluation**](https://github.com/abhishekcpp007/de-agentic-eval-book): 634 pages, from CDC and Spark to pass@k, LLM judges and reward-hacking checks
+
+---
+
 ## 🧰 Tech I use
 
 **Daily:** Python · Docker · pytest · Git · AWS (ECR, S3, Lambda, Glue) · Linux · GitHub Actions
