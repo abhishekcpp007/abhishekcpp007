@@ -44,8 +44,8 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
-[![Merged PRs](https://img.shields.io/badge/merged_PRs-14-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-24-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Merged PRs](https://img.shields.io/badge/merged_PRs-15-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-27-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -89,6 +89,10 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**pytest-timeout**](https://github.com/pytest-dev/pytest-timeout) <br><sub>pytest-dev</sub> | 261 | [#220](https://github.com/pytest-dev/pytest-timeout/pull/220) | ![status](https://img.shields.io/github/pulls/detail/state/pytest-dev/pytest-timeout/220?label=) | after one pdb stop, no later test in the session could time out |
 | [**readme_renderer**](https://github.com/pypa/readme_renderer) <br><sub>pypa</sub> | 176 | [#392](https://github.com/pypa/readme_renderer/pull/392) | ![status](https://img.shields.io/github/pulls/detail/state/pypa/readme_renderer/392?label=) | spanning header cells lost `colspan`/`rowspan`, so those tables broke on PyPI |
 | [**sphinx-argparse-cli**](https://github.com/tox-dev/sphinx-argparse-cli) <br><sub>tox-dev</sub> | 28 | [#405](https://github.com/tox-dev/sphinx-argparse-cli/pull/405) | ![status](https://img.shields.io/github/pulls/detail/state/tox-dev/sphinx-argparse-cli/405?label=) | help using `%(default)s` showed the default value twice |
+| [**markdown-it-py**](https://github.com/executablebooks/markdown-it-py) <br><sub>executablebooks</sub> | 1.4k | [#468](https://github.com/executablebooks/markdown-it-py/pull/468) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/markdown-it-py/468?label=) | a backslash before a space in a link destination broke the whole link, against CommonMark |
+| [**MyST-Parser**](https://github.com/executablebooks/MyST-Parser) <br><sub>executablebooks</sub> | 902 | [#1230](https://github.com/executablebooks/MyST-Parser/pull/1230) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/MyST-Parser/1230?label=) | `and` instead of `or` let bad `url_schemes` classes through, crashing the build later |
+| [**pyproject-metadata**](https://github.com/pypa/pyproject-metadata) <br><sub>pypa</sub> | 44 | [#352](https://github.com/pypa/pyproject-metadata/pull/352) | ![status](https://img.shields.io/github/pulls/detail/state/pypa/pyproject-metadata/352?label=) | `License-File` leaked the absolute build path into METADATA on 2.4+ |
+| [**sphinx-autobuild**](https://github.com/sphinx-doc/sphinx-autobuild) <br><sub>sphinx-doc</sub> | 612 | [#218](https://github.com/sphinx-doc/sphinx-autobuild/pull/218) | ![status](https://img.shields.io/github/pulls/detail/state/sphinx-doc/sphinx-autobuild/218?label=) | reload script spliced into 206 Range responses, corrupting partial downloads |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
