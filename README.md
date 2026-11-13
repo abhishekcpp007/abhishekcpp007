@@ -17,7 +17,6 @@ dropped it to 0/60. Details below.
 I'm open to AI engineer, LLM eval and Python backend roles, remote or relocation.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-abhisekverma007-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhisekverma007/)
-[![Email](https://img.shields.io/badge/Email-abhishek1pw%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:abhishek1pw@gmail.com)
 [![LeetCode](https://img.shields.io/badge/LeetCode-akvikramaditya007cppcoder-FFA116?logo=leetcode&logoColor=black)](https://leetcode.com/u/akvikramaditya007cppcoder/)
 
 ---
