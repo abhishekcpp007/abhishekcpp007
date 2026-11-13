@@ -45,7 +45,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
 [![Merged PRs](https://img.shields.io/badge/merged_PRs-15-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-32-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-35-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -97,6 +97,9 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**sphinx-design**](https://github.com/executablebooks/sphinx-design) <br><sub>executablebooks</sub> | 231 | [#318](https://github.com/executablebooks/sphinx-design/pull/318) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/sphinx-design/318?label=) | `tab-set-code` silently dropped code blocks with a `:caption:` |
 | [**lazy_loader**](https://github.com/scientific-python/lazy-loader) <br><sub>scientific-python</sub> | 213 | [#185](https://github.com/scientific-python/lazy-loader/pull/185) | ![status](https://img.shields.io/github/pulls/detail/state/scientific-python/lazy-loader/185?label=) | The `load()` error printed a literal `{require}` instead of the requirement |
 | [**trio-websocket**](https://github.com/python-trio/trio-websocket) <br><sub>python-trio</sub> | 80 | [#204](https://github.com/python-trio/trio-websocket/pull/204) | ![status](https://img.shields.io/github/pulls/detail/state/python-trio/trio-websocket/204?label=) | IPv6 hosts went into the Host header without brackets |
+| [**typeguard**](https://github.com/agronholm/typeguard) <br><sub>agronholm</sub> | 1.8k | [#620](https://github.com/agronholm/typeguard/pull/620) | ![status](https://img.shields.io/github/pulls/detail/state/agronholm/typeguard/620?label=) | With `@typechecked`, `x, y = z = (1, "foo")` turned `z` into a list |
+| [**mdformat**](https://github.com/hukkin/mdformat) <br><sub>hukkin</sub> | 830 | [#605](https://github.com/hukkin/mdformat/pull/605) | ![status](https://img.shields.io/github/pulls/detail/state/hukkin/mdformat/605?label=) | A `&#10;` next to a line break split one paragraph into two |
+| [**MyST-NB**](https://github.com/executablebooks/MyST-NB) <br><sub>executablebooks</sub> | 241 | [#733](https://github.com/executablebooks/MyST-NB/pull/733) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/MyST-NB/733?label=) | `nb_merge_streams` never removed backspaced characters, so raw `\x08` reached the page |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
