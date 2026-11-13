@@ -45,7 +45,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
 [![Merged PRs](https://img.shields.io/badge/merged_PRs-15-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-30-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-32-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -95,6 +95,8 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**flake8-bugbear**](https://github.com/PyCQA/flake8-bugbear) <br><sub>PyCQA</sub> | 1.1k | [#633](https://github.com/PyCQA/flake8-bugbear/pull/633) | ![status](https://img.shields.io/github/pulls/detail/state/PyCQA/flake8-bugbear/633?label=) | B021 never ran on `async def`, so f-string docstrings there were missed |
 | [**nox**](https://github.com/wntrblm/nox) <br><sub>wntrblm</sub> | 1.6k | [#1234](https://github.com/wntrblm/nox/pull/1234) | ![status](https://img.shields.io/github/pulls/detail/state/wntrblm/nox/1234?label=) | `--report` crashed on `Path` parametrize values; under `-j` passing sessions showed as failed |
 | [**sphinx-design**](https://github.com/executablebooks/sphinx-design) <br><sub>executablebooks</sub> | 231 | [#318](https://github.com/executablebooks/sphinx-design/pull/318) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/sphinx-design/318?label=) | `tab-set-code` silently dropped code blocks with a `:caption:` |
+| [**lazy_loader**](https://github.com/scientific-python/lazy-loader) <br><sub>scientific-python</sub> | 213 | [#185](https://github.com/scientific-python/lazy-loader/pull/185) | ![status](https://img.shields.io/github/pulls/detail/state/scientific-python/lazy-loader/185?label=) | The `load()` error printed a literal `{require}` instead of the requirement |
+| [**trio-websocket**](https://github.com/python-trio/trio-websocket) <br><sub>python-trio</sub> | 80 | [#204](https://github.com/python-trio/trio-websocket/pull/204) | ![status](https://img.shields.io/github/pulls/detail/state/python-trio/trio-websocket/204?label=) | IPv6 hosts went into the Host header without brackets |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
