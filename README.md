@@ -44,7 +44,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
 [![Merged PRs](https://img.shields.io/badge/merged_PRs-15-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-35-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-38-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -99,6 +99,9 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**typeguard**](https://github.com/agronholm/typeguard) <br><sub>agronholm</sub> | 1.8k | [#620](https://github.com/agronholm/typeguard/pull/620) | ![status](https://img.shields.io/github/pulls/detail/state/agronholm/typeguard/620?label=) | With `@typechecked`, `x, y = z = (1, "foo")` turned `z` into a list |
 | [**mdformat**](https://github.com/hukkin/mdformat) <br><sub>hukkin</sub> | 830 | [#605](https://github.com/hukkin/mdformat/pull/605) | ![status](https://img.shields.io/github/pulls/detail/state/hukkin/mdformat/605?label=) | A `&#10;` next to a line break split one paragraph into two |
 | [**MyST-NB**](https://github.com/executablebooks/MyST-NB) <br><sub>executablebooks</sub> | 241 | [#733](https://github.com/executablebooks/MyST-NB/pull/733) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/MyST-NB/733?label=) | `nb_merge_streams` never removed backspaced characters, so raw `\x08` reached the page |
+| [**spin**](https://github.com/scientific-python/spin) <br><sub>scientific-python</sub> | 137 | [#333](https://github.com/scientific-python/spin/pull/333) | ![status](https://img.shields.io/github/pulls/detail/state/scientific-python/spin/333?label=) | `spin introspect` crashed with a `TypeError` when a project had no `[tool.spin.kwargs]` table |
+| [**nbformat**](https://github.com/jupyter/nbformat) <br><sub>jupyter</sub> | 315 | [#474](https://github.com/jupyter/nbformat/pull/474) | ![status](https://img.shields.io/github/pulls/detail/state/jupyter/nbformat/474?label=) | A form feed at the end of a v3 line made `_join_lines` add extra newlines on every round trip |
+| [**sqlite-utils**](https://github.com/simonw/sqlite-utils) <br><sub>simonw</sub> | 2.2k | [#945](https://github.com/simonw/sqlite-utils/pull/945) | ![status](https://img.shields.io/github/pulls/detail/state/simonw/sqlite-utils/945?label=) | `transform(not_null={"col": False})` added `NOT NULL` to a column that was already nullable |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
