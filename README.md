@@ -44,7 +44,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
 [![Merged PRs](https://img.shields.io/badge/merged_PRs-15-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-38-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-43-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -102,6 +102,11 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**spin**](https://github.com/scientific-python/spin) <br><sub>scientific-python</sub> | 137 | [#333](https://github.com/scientific-python/spin/pull/333) | ![status](https://img.shields.io/github/pulls/detail/state/scientific-python/spin/333?label=) | `spin introspect` crashed with a `TypeError` when a project had no `[tool.spin.kwargs]` table |
 | [**nbformat**](https://github.com/jupyter/nbformat) <br><sub>jupyter</sub> | 315 | [#474](https://github.com/jupyter/nbformat/pull/474) | ![status](https://img.shields.io/github/pulls/detail/state/jupyter/nbformat/474?label=) | A form feed at the end of a v3 line made `_join_lines` add extra newlines on every round trip |
 | [**sqlite-utils**](https://github.com/simonw/sqlite-utils) <br><sub>simonw</sub> | 2.2k | [#945](https://github.com/simonw/sqlite-utils/pull/945) | ![status](https://img.shields.io/github/pulls/detail/state/simonw/sqlite-utils/945?label=) | `transform(not_null={"col": False})` added `NOT NULL` to a column that was already nullable |
+| [**particle**](https://github.com/scikit-hep/particle) <br><sub>scikit-hep</sub> | 167 | [#828](https://github.com/scikit-hep/particle/pull/828) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/particle/828?label=) | `j_spin` fell through to the hadron rule for unhandled SUSY IDs and gave J=3 or J=7/2 for elementary sparticles |
+| [**wcmatch**](https://github.com/facelessuser/wcmatch) <br><sub>facelessuser</sub> | 169 | [#280](https://github.com/facelessuser/wcmatch/pull/280) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/wcmatch/280?label=) | With `MINUSNEGATE`, an exclusion like `-~/*.py` never expanded `~`, so it excluded nothing |
+| [**hist**](https://github.com/scikit-hep/hist) <br><sub>scikit-hep</sub> | 140 | [#766](https://github.com/scikit-hep/hist/pull/766) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/hist/766?label=) | `ChunkedHist.to_hist()` set category labels to the axis name, so adding the result to its source raised `axes not mergable` |
+| [**pytest-doctestplus**](https://github.com/scientific-python/pytest-doctestplus) <br><sub>scientific-python</sub> | 120 | [#328](https://github.com/scientific-python/pytest-doctestplus/pull/328) | ![status](https://img.shields.io/github/pulls/detail/state/scientific-python/pytest-doctestplus/328?label=) | A regex range dropped `-` as a separator, so `FLOAT_CMP` failed on complex numbers like `(1.5-2.5j)` |
+| [**vector**](https://github.com/scikit-hep/vector) <br><sub>scikit-hep</sub> | 103 | [#763](https://github.com/scikit-hep/vector/pull/763) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/vector/763?label=) | `isclose` on two rho-phi vectors compared phi directly, so vectors on either side of ±π weren't close |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
