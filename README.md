@@ -44,7 +44,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
 [![Merged PRs](https://img.shields.io/badge/merged_PRs-17-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-45-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-49-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -111,6 +111,10 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**decaylanguage**](https://github.com/scikit-hep/decaylanguage) <br><sub>scikit-hep</sub> | 43 | [#650](https://github.com/scikit-hep/decaylanguage/pull/650) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/decaylanguage/650?label=) | Nested `DescriptorFormat` blocks restored the wrong format on exit, so the inner one wiped out the outer one |
 | [**bracex**](https://github.com/facelessuser/bracex) <br><sub>facelessuser</sub> | 33 | [#64](https://github.com/facelessuser/bracex/pull/64) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/bracex/64?label=) | Ranges whose span overflows int64 were expanded, where Bash 5.3 keeps them literal |
 | [**boost-histogram**](https://github.com/scikit-hep/boost-histogram) <br><sub>scikit-hep</sub> | 165 | [#1209](https://github.com/scikit-hep/boost-histogram/pull/1209) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/boost-histogram/1209?label=) | A UHI round trip turned the stored deltas of one-entry Mean bins into NaN, so later fills had NaN variance |
+| [**backrefs**](https://github.com/facelessuser/backrefs) <br><sub>facelessuser</sub> | 13 | [#220](https://github.com/facelessuser/backrefs/pull/220) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/backrefs/220?label=) | A null escape like `\0` at the end of a replace template raised an error instead of giving `\x00` |
+| [**parse**](https://github.com/r1chardj0n3s/parse) <br><sub>r1chardj0n3s</sub> | 1.8k | [#286](https://github.com/r1chardj0n3s/parse/pull/286) | ![status](https://img.shields.io/github/pulls/detail/state/r1chardj0n3s/parse/286?label=) | The `e` and `g` types rejected `+nan` and `" inf"`, which `str.format()` itself writes |
+| [**pylhe**](https://github.com/scikit-hep/pylhe) <br><sub>scikit-hep</sub> | 49 | [#439](https://github.com/scikit-hep/pylhe/pull/439) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/pylhe/439?label=) | A `#` comment line in the `<init>` block made the whole LHE file unreadable |
+| [**mdit-py-plugins**](https://github.com/executablebooks/mdit-py-plugins) <br><sub>executablebooks</sub> | 51 | [#177](https://github.com/executablebooks/mdit-py-plugins/pull/177) | ![status](https://img.shields.io/github/pulls/detail/state/executablebooks/mdit-py-plugins/177?label=) | A `%` comment at column 0 after a list item got pulled into the item, with a wrong token map |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
