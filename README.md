@@ -44,7 +44,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
 [![Merged PRs](https://img.shields.io/badge/merged_PRs-17-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
-[![Open PRs](https://img.shields.io/badge/in_review-41-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
+[![Open PRs](https://img.shields.io/badge/in_review-45-1f6feb?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Aopen+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -107,6 +107,10 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**hist**](https://github.com/scikit-hep/hist) <br><sub>scikit-hep</sub> | 140 | [#766](https://github.com/scikit-hep/hist/pull/766) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/hist/766?label=) | `ChunkedHist.to_hist()` set category labels to the axis name, so adding the result to its source raised `axes not mergable` |
 | [**pytest-doctestplus**](https://github.com/scientific-python/pytest-doctestplus) <br><sub>scientific-python</sub> | 120 | [#328](https://github.com/scientific-python/pytest-doctestplus/pull/328) | ![status](https://img.shields.io/github/pulls/detail/state/scientific-python/pytest-doctestplus/328?label=) | A regex range dropped `-` as a separator, so `FLOAT_CMP` failed on complex numbers like `(1.5-2.5j)` |
 | [**vector**](https://github.com/scikit-hep/vector) <br><sub>scikit-hep</sub> | 103 | [#763](https://github.com/scikit-hep/vector/pull/763) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/vector/763?label=) | `isclose` on two rho-phi vectors compared phi directly, so vectors on either side of ±π weren't close |
+| [**pymdown-extensions**](https://github.com/facelessuser/pymdown-extensions) <br><sub>facelessuser</sub> | 1.1k | [#3052](https://github.com/facelessuser/pymdown-extensions/pull/3052) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/pymdown-extensions/3052?label=) | Quoted keys like `++"a\\b"++` dropped escaped backslashes, so `a\\b` rendered as `a\b` |
+| [**decaylanguage**](https://github.com/scikit-hep/decaylanguage) <br><sub>scikit-hep</sub> | 43 | [#650](https://github.com/scikit-hep/decaylanguage/pull/650) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/decaylanguage/650?label=) | Nested `DescriptorFormat` blocks restored the wrong format on exit, so the inner one wiped out the outer one |
+| [**bracex**](https://github.com/facelessuser/bracex) <br><sub>facelessuser</sub> | 33 | [#64](https://github.com/facelessuser/bracex/pull/64) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/bracex/64?label=) | Ranges whose span overflows int64 were expanded, where Bash 5.3 keeps them literal |
+| [**boost-histogram**](https://github.com/scikit-hep/boost-histogram) <br><sub>scikit-hep</sub> | 165 | [#1209](https://github.com/scikit-hep/boost-histogram/pull/1209) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/boost-histogram/1209?label=) | A UHI round trip turned the stored deltas of one-entry Mean bins into NaN, so later fills had NaN variance |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
