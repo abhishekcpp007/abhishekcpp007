@@ -43,7 +43,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
-[![Merged PRs](https://img.shields.io/badge/merged_PRs-20-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
+[![Merged PRs](https://img.shields.io/badge/merged_PRs-25-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -68,6 +68,11 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**hist**](https://github.com/scikit-hep/hist) <br><sub>scikit-hep</sub> | 140 | [#766](https://github.com/scikit-hep/hist/pull/766) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/hist/766?label=) | `ChunkedHist.to_hist()` set category labels to the axis name, so adding the result to its source raised `axes not mergable` |
 | [**bracex**](https://github.com/facelessuser/bracex) <br><sub>facelessuser</sub> | 33 | [#64](https://github.com/facelessuser/bracex/pull/64) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/bracex/64?label=) | Ranges whose span overflows int64 were expanded, where Bash 5.3 keeps them literal |
 | [**parse**](https://github.com/r1chardj0n3s/parse) <br><sub>r1chardj0n3s</sub> | 1.8k | [#286](https://github.com/r1chardj0n3s/parse/pull/286) | ![status](https://img.shields.io/github/pulls/detail/state/r1chardj0n3s/parse/286?label=) | The `e` and `g` types rejected `+nan` and `" inf"`, which `str.format()` itself writes |
+| [**decaylanguage**](https://github.com/scikit-hep/decaylanguage) <br><sub>scikit-hep</sub> | 43 | [#650](https://github.com/scikit-hep/decaylanguage/pull/650) | ![status](https://img.shields.io/github/pulls/detail/state/scikit-hep/decaylanguage/650?label=) | `DescriptorFormat` saved the config when built, so nested `with` blocks restored the wrong format on exit |
+| [**backrefs**](https://github.com/facelessuser/backrefs) <br><sub>facelessuser</sub> | 13 | [#220](https://github.com/facelessuser/backrefs/pull/220) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/backrefs/220?label=) | A null escape at the end of a replace template raised `PatternError` where `re` returns `\x00` |
+| [**nox**](https://github.com/wntrblm/nox) <br><sub>wntrblm</sub> | 1.6k | [#1234](https://github.com/wntrblm/nox/pull/1234) | ![status](https://img.shields.io/github/pulls/detail/state/wntrblm/nox/1234?label=) | `nox --report` crashed on a `Path` parametrize value and left the report file cut off |
+| [**pymdown-extensions**](https://github.com/facelessuser/pymdown-extensions) <br><sub>facelessuser</sub> | 1.1k | [#3052](https://github.com/facelessuser/pymdown-extensions/pull/3052) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/pymdown-extensions/3052?label=) | Keys swallowed escaped backslashes in quoted keys, so only the last escaped character survived |
+| [**OpenEnv**](https://github.com/openenv/OpenEnv) <br><sub>openenv</sub> | 2.9k | [#1631](https://github.com/openenv/OpenEnv/pull/1631) | ![status](https://img.shields.io/github/pulls/detail/state/openenv/OpenEnv/1631?label=) | The FinQA reward cut `\boxed{}` answers at the first `}`, so a correct answer with `\text{}` inside scored 0 |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
