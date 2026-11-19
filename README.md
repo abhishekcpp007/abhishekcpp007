@@ -99,9 +99,8 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 
 ## 💼 Experience
 
-- **Ethara AI** (via Quess Corp) · Software Engineer, RL Environments and Evaluation · 2026 to now
-- **NavAdr Technologies** · Software Engineer (Data) · 2025 to 2026. Python ETL into Snowflake, 200K+ records a day
-- **GlobalLogic** · Associate Analyst · 2024 to 2025. CI/CD with Docker and GitHub Actions on AWS
+- **Ethara AI** (via Quess Corp) · Full Stack Developer, RL Environments and Evaluation · 2026 to now
+- **NavAdr Technologies** · Software Engineer (Data) · 2024 to 2026. Python ETL into Snowflake, 200K+ records a day
 
 ---
 
