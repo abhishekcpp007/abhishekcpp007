@@ -43,7 +43,7 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
-[![Merged PRs](https://img.shields.io/badge/merged_PRs-30-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
+[![Merged PRs](https://img.shields.io/badge/merged_PRs-32-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -78,6 +78,8 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**sphinx-argparse-cli**](https://github.com/tox-dev/sphinx-argparse-cli) <br><sub>tox-dev</sub> | 28 | [#405](https://github.com/tox-dev/sphinx-argparse-cli/pull/405) | ![status](https://img.shields.io/github/pulls/detail/state/tox-dev/sphinx-argparse-cli/405?label=) | Help that already used `%(default)s` got a second `(default: ...)` appended |
 | [**pipdeptree**](https://github.com/tox-dev/pipdeptree) <br><sub>tox-dev</sub> | 3k | [#882](https://github.com/tox-dev/pipdeptree/pull/882) | ![status](https://img.shields.io/github/pulls/detail/state/tox-dev/pipdeptree/882?label=) | With `--reverse` and `--depth`, Graphviz output put missing requirements at the wrong depth, unlike the text tree |
 | [**sqlacodegen**](https://github.com/agronholm/sqlacodegen) <br><sub>agronholm</sub> | 2.4k | [#491](https://github.com/agronholm/sqlacodegen/pull/491) | ![status](https://img.shields.io/github/pulls/detail/state/agronholm/sqlacodegen/491?label=) | A column named `registry` wasn't renamed like `metadata`, so generated code warned on import |
+| [**exceptiongroup**](https://github.com/agronholm/exceptiongroup) <br><sub>agronholm</sub> | 51 | [#169](https://github.com/agronholm/exceptiongroup/pull/169) | ![status](https://img.shields.io/github/pulls/detail/state/agronholm/exceptiongroup/169?label=) | `subgroup()` and `split()` didn't check what `derive()` returned, so a broken override got an `AttributeError` or no error at all |
+| [**exceptiongroup**](https://github.com/agronholm/exceptiongroup) <br><sub>agronholm</sub> | 51 | [#170](https://github.com/agronholm/exceptiongroup/pull/170) | ![status](https://img.shields.io/github/pulls/detail/state/agronholm/exceptiongroup/170?label=) | A class that isn't an exception type, like `bool`, was used as a predicate and quietly matched everything |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
