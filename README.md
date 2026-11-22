@@ -19,22 +19,14 @@ relocation.
 
 ## Gauntlet
 
-My main open source project. It turns pull requests merged this week into sandboxed, leak-checked
-coding tasks, then grades every run with a grader I attacked on purpose.
+My main open source project: [**gauntlet-bench**](https://github.com/abhishekcpp007/gauntlet-bench). It turns freshly
+merged pull requests into sandboxed, leak-checked coding tasks, then grades every run with a grader I
+attacked on purpose.
 
-- **Task sets:** 147 tasks from 26 repos, from pull requests merged that week. The real fix passes 146.
-- **Red team:** I wrote nine cheating agents against my own grader. They first solved 7 of 10 tasks at reward 0.89. After canary tests and renamed test targets they got 0 of 60 and 0 of 53.
-- **Cheat detector:** 11 detectors, with no false positives on 53 real merged fixes.
-
-| Repo | What it does |
-|---|---|
-| [**gauntlet**](https://github.com/abhishekcpp007/gauntlet) | Start here. The results, and one `docker compose up` that runs the whole thing |
-| [**gauntlet-harness**](https://github.com/abhishekcpp007/gauntlet-harness) | Builds leak-free RL environments from freshly merged pull requests and judges each run |
-| [**gauntlet-cheatcatcher**](https://github.com/abhishekcpp007/gauntlet-cheatcatcher) | 11 reward-hacking detectors for coding agents |
-| [**gauntlet-repo2env**](https://github.com/abhishekcpp007/gauntlet-repo2env) | Turns a repo into Docker env images and SWE-style tasks |
-| [**gauntlet-sandbox**](https://github.com/abhishekcpp007/gauntlet-sandbox) | Docker sandboxes that record every agent step as a trajectory |
-| [**gauntlet-timemachine**](https://github.com/abhishekcpp007/gauntlet-timemachine) | Replay, branch and diff agent trajectories |
-| [**gauntlet-arena**](https://github.com/abhishekcpp007/gauntlet-arena) | A human and an AI agent race on the same task, with a leaderboard |
+- **Task sets:** 147 tasks from 26 repos, built from freshly merged pull requests. The real fix passes 146.
+- **Red team:** I wrote nine cheating agents against my own grader. Across 899 cheat runs on the shipped tasks, none solved a task or scored above 0.
+- **Cheat detector:** 11 static rules, with no cheating verdict on any of the 147 real merged fixes.
+- **Every night:** the cheats run again on 4 random tasks, and the build fails if one scores above 0.
 
 ## rag-harness
 
