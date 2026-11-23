@@ -43,7 +43,9 @@ My main open-source project, and the fastest way to see how I work. It mines PRs
 
 I read the code of LLM eval and interpretability libraries I use, find real bugs, and send fixes with regression tests. Every one of these started as a bug I hit or spotted myself.
 
-[![Merged PRs](https://img.shields.io/badge/merged_PRs-25-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
+33 merged pull requests across 28 upstream repositories.
+
+[![Merged PRs](https://img.shields.io/badge/merged_PRs-33-8957e5?logo=github)](https://github.com/pulls?q=is%3Apr+author%3Aabhishekcpp007+is%3Amerged+-user%3Aabhishekcpp007)
 [![Issues](https://img.shields.io/badge/bug_reports-8-d29922?logo=github)](https://github.com/issues?q=is%3Aissue+author%3Aabhishekcpp007+-user%3Aabhishekcpp007)
 
 | Project | ⭐ | PR | Status | What I fixed |
@@ -73,6 +75,14 @@ I read the code of LLM eval and interpretability libraries I use, find real bugs
 | [**nox**](https://github.com/wntrblm/nox) <br><sub>wntrblm</sub> | 1.6k | [#1234](https://github.com/wntrblm/nox/pull/1234) | ![status](https://img.shields.io/github/pulls/detail/state/wntrblm/nox/1234?label=) | `nox --report` crashed on a `Path` parametrize value and left the report file cut off |
 | [**pymdown-extensions**](https://github.com/facelessuser/pymdown-extensions) <br><sub>facelessuser</sub> | 1.1k | [#3052](https://github.com/facelessuser/pymdown-extensions/pull/3052) | ![status](https://img.shields.io/github/pulls/detail/state/facelessuser/pymdown-extensions/3052?label=) | Keys swallowed escaped backslashes in quoted keys, so only the last escaped character survived |
 | [**OpenEnv**](https://github.com/openenv/OpenEnv) <br><sub>openenv</sub> | 2.9k | [#1631](https://github.com/openenv/OpenEnv/pull/1631) | ![status](https://img.shields.io/github/pulls/detail/state/openenv/OpenEnv/1631?label=) | The FinQA reward cut `\boxed{}` answers at the first `}`, so a correct answer with `\text{}` inside scored 0 |
+| [**tox**](https://github.com/tox-dev/tox) <br><sub>tox-dev</sub> | 4k | [#4393](https://github.com/tox-dev/tox/pull/4393) | ![status](https://img.shields.io/github/pulls/detail/state/tox-dev/tox/4393?label=) | Changing `system_site_packages` on an existing environment did nothing, so it kept the old value until `tox -r` |
+| [**sphinx-autodoc-typehints**](https://github.com/tox-dev/sphinx-autodoc-typehints) <br><sub>tox-dev</sub> | 589 | [#1124](https://github.com/tox-dev/sphinx-autodoc-typehints/pull/1124) | ![status](https://img.shields.io/github/pulls/detail/state/tox-dev/sphinx-autodoc-typehints/1124?label=) | A parameter ending in an underscore, like `lambda_`, lost the type its docstring gave it |
+| [**sphinx-argparse-cli**](https://github.com/tox-dev/sphinx-argparse-cli) <br><sub>tox-dev</sub> | 28 | [#405](https://github.com/tox-dev/sphinx-argparse-cli/pull/405) | ![status](https://img.shields.io/github/pulls/detail/state/tox-dev/sphinx-argparse-cli/405?label=) | Help that already used `%(default)s` got a second `(default: ...)` appended |
+| [**pipdeptree**](https://github.com/tox-dev/pipdeptree) <br><sub>tox-dev</sub> | 3k | [#882](https://github.com/tox-dev/pipdeptree/pull/882) | ![status](https://img.shields.io/github/pulls/detail/state/tox-dev/pipdeptree/882?label=) | With `--reverse` and `--depth`, Graphviz output put missing requirements at the wrong depth, unlike the text tree |
+| [**sqlacodegen**](https://github.com/agronholm/sqlacodegen) <br><sub>agronholm</sub> | 2.4k | [#491](https://github.com/agronholm/sqlacodegen/pull/491) | ![status](https://img.shields.io/github/pulls/detail/state/agronholm/sqlacodegen/491?label=) | A column named `registry` wasn't renamed like `metadata`, so generated code warned on import |
+| [**exceptiongroup**](https://github.com/agronholm/exceptiongroup) <br><sub>agronholm</sub> | 51 | [#169](https://github.com/agronholm/exceptiongroup/pull/169) | ![status](https://img.shields.io/github/pulls/detail/state/agronholm/exceptiongroup/169?label=) | `subgroup()` and `split()` didn't check what `derive()` returned, so a broken override got an `AttributeError` or no error at all |
+| [**exceptiongroup**](https://github.com/agronholm/exceptiongroup) <br><sub>agronholm</sub> | 51 | [#170](https://github.com/agronholm/exceptiongroup/pull/170) | ![status](https://img.shields.io/github/pulls/detail/state/agronholm/exceptiongroup/170?label=) | A class that isn't an exception type, like `bool`, was used as a predicate and quietly matched everything |
+| [**OpenEnv**](https://github.com/openenv/OpenEnv) <br><sub>openenv</sub> | 2.9k | [#1684](https://github.com/openenv/OpenEnv/pull/1684) | ![status](https://img.shields.io/github/pulls/detail/state/openenv/OpenEnv/1684?label=) | TextArena now clears the previous episode’s reward signals before taking the reset snapshot, so a new episode starts with clean state. |
 
 **Bug reports**
 - [langchain-ai/deepagents#7477](https://github.com/langchain-ai/deepagents/issues/7477): `execute` timeout leaves the command's child processes running (fix ready on my fork)
